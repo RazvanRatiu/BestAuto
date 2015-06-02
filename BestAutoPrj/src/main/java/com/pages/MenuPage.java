@@ -4,10 +4,10 @@ import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.annotations.DefaultUrl;
+import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-
-
+@DefaultUrl("http://bestauto.ro")
 public class MenuPage extends PageObject {
 	
 	@FindBy(css="a[href='http://www.bestauto.ro/vanzari-auto-piata-auto-cautari.htm']")
@@ -28,7 +28,7 @@ public class MenuPage extends PageObject {
 	@FindBy(id="homeSearchButton")
 	private WebElementFacade homeSearchButton;
 	
-	@FindBy(css =".freetext magnifying-glass")
+	@FindBy(id ="homeSearch")
 	private WebElementFacade quickSearchInput;
 	
 	public void clickCautareButton() {
@@ -51,7 +51,6 @@ public class MenuPage extends PageObject {
 		(dropDownMenu).selectByVisibleText(option);
     }   
 
-
 	public void clickOnHomeSearchButton(){
 		homeSearchButton.click();
 	}
@@ -59,9 +58,6 @@ public class MenuPage extends PageObject {
 	public void insertSearchCriteria(String value){
 		quickSearchInput.type(value);
 	}
-
-
-
 
 
 }
