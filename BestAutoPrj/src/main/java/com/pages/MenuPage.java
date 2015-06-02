@@ -2,9 +2,9 @@ package com.pages;
 
 import org.openqa.selenium.WebElement;
 
-import net.thucydides.core.annotations.findby.FindBy;
+import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
-import net.thucydides.core.pages.WebElementFacade;
+import net.serenitybdd.core.pages.WebElementFacade;
 
 public class MenuPage extends PageObject {
 	
@@ -22,6 +22,12 @@ public class MenuPage extends PageObject {
 	
 	@FindBy(id="homeSearchCategory")
 	private WebElementFacade dropDownMenu;
+	
+	@FindBy(id="homeSearchButton")
+	private WebElementFacade homeSearchButton;
+	
+	@FindBy(css =".freetext magnifying-glass")
+	private WebElementFacade quickSearchInput;
 	
 	public void clickCautareButton() {
         cautareButton.click();
@@ -43,7 +49,13 @@ public class MenuPage extends PageObject {
 		(dropDownMenu).selectByVisibleText(option);
     }   
 
-
+	public void clickOnHomeSearchButton(){
+		homeSearchButton.click();
+	}
+	
+	public void insertSearchCriteria(String value){
+		quickSearchInput.type(value);
+	}
 
 
 }
