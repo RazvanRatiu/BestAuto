@@ -7,41 +7,51 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
 public class MenuSteps extends ScenarioSteps {
-	MenuPage menupage;
-	SearchResultsPage searchpage;
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	MenuPage menuPage;
+	
+	@Step
+    public void openHomePage() {
+        menuPage.open();
+    }
 
 	@Step
 	public void clickSearchButton() {
-		menupage.clickCautareButton();
+		menuPage.clickCautareButton();
 	}
 
 	@Step
 	public void clickAddOnAd() {
-		menupage.clickAdaugaAnuntButton();
+		menuPage.clickAdaugaAnuntButton();
 	}
 
 	@Step
 	public void clickMyAccount() {
-		menupage.clickContulMenuButton();
+		menuPage.clickContulMenuButton();
 	}
 
 	@Step
 	public void clickDealerButton() {
-		menupage.clickDealerButton();
+		menuPage.clickDealerButton();
 	}
 
 	@Step
 	public void selectDropDownMenu(String option) {
-		menupage.selectDropDownMenu(option);
+		menuPage.selectDropDownMenu(option);
 	}
 
 	@Step
 	public void clickOnHomeSearchButton() {
-		menupage.clickOnHomeSearchButton();
+		menuPage.clickOnHomeSearchButton();
 	}
 
 	@Step
 	public void insertSearchCriteria(String value) {
-		menupage.insertSearchCriteria(value);
+		menuPage.insertSearchCriteria(value);
 	}
 }
