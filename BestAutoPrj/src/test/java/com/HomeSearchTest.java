@@ -38,6 +38,12 @@ public class HomeSearchTest {
     @Test
     public void homeSearch() {
     	homeSteps.selectBrand(brand);
+    	homeSteps.selectModel(model);
+    	homeSteps.selectPrice(price);
+    	homeSteps.selectVehiclege(buildDate);
+    	homeSteps.selectKilometers(kilometers);
+    	homeSteps.selectFuel(fuel);
+    	homeSteps.clickSearchButton();
 
     }
 }
