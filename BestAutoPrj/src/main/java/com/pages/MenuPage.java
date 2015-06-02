@@ -3,8 +3,10 @@ package com.pages;
 import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
+import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
+
 
 public class MenuPage extends PageObject {
 	
@@ -49,6 +51,7 @@ public class MenuPage extends PageObject {
 		(dropDownMenu).selectByVisibleText(option);
     }   
 
+
 	public void clickOnHomeSearchButton(){
 		homeSearchButton.click();
 	}
@@ -56,6 +59,9 @@ public class MenuPage extends PageObject {
 	public void insertSearchCriteria(String value){
 		quickSearchInput.type(value);
 	}
+
+
+
 
 
 }
