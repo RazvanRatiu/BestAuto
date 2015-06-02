@@ -9,37 +9,38 @@ import net.thucydides.core.pages.WebElementFacade;
 public class MenuPage extends PageObject {
 	
 	@FindBy(css="a[href='http://www.bestauto.ro/vanzari-auto-piata-auto-cautari.htm']")
-    private WebElement clickCautareButton;
+    private WebElement cautareButton;
 	
 	@FindBy(css="a[href='http://www.bestauto.ro/plasare-oferte-auto.htm']")
-    private WebElementFacade clickAdaugaAnuntButton;
+    private WebElementFacade adaugaAnuntButton;
     
 	@FindBy(css="a[href='http://www.bestauto.ro/Default.aspx?Action=MyAds']")
-    private WebElementFacade clickContulMeuButton;
+    private WebElementFacade contulMenuButton;
     
 	@FindBy(css="a[href='http://www.bestauto.ro/parcuri-auto']")
-    private WebElementFacade clickDealerButton;
+    private WebElementFacade dealerButton;
 	
 	@FindBy(id="homeSearchCategory")
-	private WebElementFacade clickDropDownMenu;
+	private WebElementFacade dropDownMenu;
 	
 	public void clickCautareButton() {
-        clickCautareButton.click();
+        cautareButton.click();
     }  
 	
 	public void clickAdaugaAnuntButton() {
-        clickAdaugaAnuntButton.click();
+        adaugaAnuntButton.click();
     }  
 	
-	public void clickContulMeuButton() {
-        clickContulMeuButton.click();
+	public void clickContulMenuButton() {
+       contulMenuButton.click();
     }  
 	
 	public void clickDealerButton() {
-        clickDealerButton.click();
+        dealerButton.click();
     }  
 	
-	public void clickDropDownMenu() {
-        clickDropDownMenu.click();
+	public void selectDropDownMenu(String option) {
+		(dropDownMenu).selectByVisibleText(option);
     }   
+
 }
