@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import com.pages.HomePage;
-import com.steps.HomePageSteps;
+import com.steps.HomeSteps;
 
 @RunWith(ThucydidesRunner.class)
 public class HomeSearchTest {
@@ -26,7 +26,7 @@ public class HomeSearchTest {
     public Pages pages;
 
     @Steps
-	public HomePageSteps homePageSteps;
+	public HomeSteps homeSteps;
 
 	String brand = "VW";
 	String model = "Bora";
@@ -37,7 +37,7 @@ public class HomeSearchTest {
 
     @Test
     public void homeSearch() {
-    	homePageSteps.selectBrand(brand);
+    	homeSteps.selectBrand(brand);
 
     }
 }
