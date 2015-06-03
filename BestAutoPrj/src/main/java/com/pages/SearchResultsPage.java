@@ -36,5 +36,7 @@ public class SearchResultsPage extends PageObject {
 		}
 		Assert.assertTrue("The search criteria is not in the page", found);
 	}
-
+	
+	
+	
 }
