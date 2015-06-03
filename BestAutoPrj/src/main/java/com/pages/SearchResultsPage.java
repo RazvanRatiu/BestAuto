@@ -17,7 +17,7 @@ public class SearchResultsPage extends PageObject {
 
 	public void checkIfSearchCriteriaAppearsOnResultsPage(String searchText) {
 
-		boolean found = true;
+		boolean found = false;
 		element(searchPageContainer).waitUntilVisible();
 
 		List<WebElement> resultListItems = searchPageContainer.findElements(By
