@@ -1,6 +1,8 @@
 package com;
 
 
+import java.util.List;
+
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Steps;
@@ -11,6 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import com.Tools.SearchResultModel;
 import com.pages.HomePage;
 import com.pages.MenuPage;
 import com.pages.SearchResultsPage;
@@ -36,11 +39,16 @@ public class NegativePriceTest {
 	public SearchResultsSteps searchResultSteps;
 
 	@Test
-	public void findIfSearchResultContainsKeyword() {
+	public void negativePriceTest() {
 		menuSteps.openHomePage();
-		menuSteps.selectDropDownMenu("Diverse");
+		menuSteps.selectDropDownMenu("Auto");
 		menuSteps.clickOnHomeSearchButton();
-		negativePriceSteps.negativePrice();
+		List<SearchResultModel> resultItemsList = negativePriceSteps.negativePrice();
+		
+		
+		for (SearchResultModel searchResultModel : resultItemsList) {
+			negativePriceSteps.verifyPrice(searchResultModel.getName(), searchResultModel.getPrice());
+		}
 	}
 
 	

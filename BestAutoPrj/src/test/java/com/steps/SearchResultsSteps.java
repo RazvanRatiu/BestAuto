@@ -2,8 +2,7 @@ package com.steps;
 
 import java.util.List;
 
-import Constants.com.SearchResultModel;
-
+import com.Tools.SearchResultModel;
 import com.pages.SearchResultsPage;
 
 import net.thucydides.core.annotations.Step;
