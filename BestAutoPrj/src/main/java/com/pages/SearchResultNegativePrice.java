@@ -1,6 +1,11 @@
 package com.pages;
 
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,9 +57,16 @@ public class SearchResultNegativePrice extends PageObject{
 				check = false; 
 //				
 			}
+			
+			
 		}
 		Assert.assertTrue("The price is not negative",check);
 		return priceList;
+		
+		
+		
+		
+		
 	}
 
 }
