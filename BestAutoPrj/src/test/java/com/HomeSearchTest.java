@@ -54,7 +54,6 @@ public class HomeSearchTest {
     	homeSteps.selectKilometers(kilometers);
     	homeSteps.selectFuel(fuel);
     	homeSteps.clickSearchButton();
-		searchResultSteps.checkIfSearchCriteriaAppearsInResultsPage();
 
     }
 }
