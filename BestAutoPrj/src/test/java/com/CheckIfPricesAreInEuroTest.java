@@ -10,7 +10,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.steps.CheckIfAllPricesAreInEuroSteps;
 import com.steps.MenuSteps;
 import com.steps.SearchResultsSteps;
 
@@ -28,18 +27,12 @@ public class CheckIfPricesAreInEuroTest {
 	@Steps
 	public SearchResultsSteps searchResultSteps;
 
-	@Steps 
-	public CheckIfAllPricesAreInEuroSteps checkIfAllPricesAreInEuroSteps;
-	
-	@Test 
-	public void seeIfPricesAreInEuroTest(){
+	@Test
+	public void seeIfPricesAreInEuroTest() {
 		menuSteps.openHomePage();
 		menuSteps.selectDropDownMenu("Moto");
-		menuSteps.clickOnHomeSearchButton(); 
-		checkIfAllPricesAreInEuroSteps.checkIfPricesAreInEuro();
+		menuSteps.clickOnHomeSearchButton();
+		searchResultSteps.checkIfPriceIsInEuro();
 	}
-	
-
-
 
 }

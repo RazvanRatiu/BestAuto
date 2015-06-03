@@ -1,5 +1,9 @@
 package com.steps;
 
+import java.util.List;
+
+import Constants.com.SearchResultModel;
+
 import com.pages.SearchResultsPage;
 
 import net.thucydides.core.annotations.Step;
@@ -19,4 +23,8 @@ public class SearchResultsSteps extends ScenarioSteps {
 		searchResultsPage.checkIfSearchCriteriaAppearsOnResultsPage(text);
 	}
 	
+	@Step
+	public void checkIfPriceIsInEuro(){
+		 searchResultsPage.checkIfPriceIsInEuro();
+	} 
 }

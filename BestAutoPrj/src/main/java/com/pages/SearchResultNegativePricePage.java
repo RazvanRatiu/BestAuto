@@ -15,12 +15,12 @@ import org.openqa.selenium.WebElement;
 import Constants.com.SearchResultModel;
 
 @DefaultUrl("http://bestauto.ro")
-public class SearchResultNegativePrice extends PageObject{
+public class SearchResultNegativePricePage extends PageObject{
 	
 	@FindBy(id = "results_list")
 	private WebElement searchPageContainer; 
 	
-	public List<SearchResultModel> checkIfPriceIsNegative(){
+	public void checkIfPriceIsNegative(){
 		
 		List<SearchResultModel> priceList = new ArrayList<SearchResultModel>();
 		element(searchPageContainer).waitUntilVisible();
@@ -47,14 +47,14 @@ public class SearchResultNegativePrice extends PageObject{
 			
 			if(pretz > 0){
 				check = true; 
-//				
+				
 			}else{
 				check = false; 
-//				
+				
 			}
 		}
 		Assert.assertTrue("The price is not negative",check);
-		return priceList;
+		
 	}
 
 }

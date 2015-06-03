@@ -1,17 +1,17 @@
 package com.steps;
 
-import com.pages.SearchResultNegativePrice;
+import com.pages.SearchResultNegativePricePage;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
 public class NegativePriceSteps extends ScenarioSteps{
 	
-	SearchResultNegativePrice searchResultNegativePrice;
+	SearchResultNegativePricePage searchResultNegativePricePage;
 	
 	@Step 
 	public void negativePrice(){
-		searchResultNegativePrice.checkIfPriceIsNegative();
+		searchResultNegativePricePage.checkIfPriceIsNegative();
 		
 	}
 }
