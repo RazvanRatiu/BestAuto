@@ -1,10 +1,11 @@
 package com;
 
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Managed;
-
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.pages.Pages;
+import net.thucydides.junit.annotations.UseTestDataFrom;
 import net.thucydides.junit.runners.ThucydidesRunner;
 
 import org.junit.Test;
@@ -17,7 +18,8 @@ import com.pages.SearchResultsPage;
 import com.steps.MenuSteps;
 import com.steps.SearchResultsSteps;
 
-@RunWith(ThucydidesRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
+@UseTestDataFrom("resources/criterias.csv")
 public class QuickSearchTest {
 	
 	@Managed(uniqueSession = true)
@@ -32,13 +34,15 @@ public class QuickSearchTest {
 	@Steps
 	public SearchResultsSteps searchResultSteps;
 
+	String searchCriteria, auto;
+	
 	@Test
 	public void findIfSearchResultContainsKeyword() {
 		menuSteps.openHomePage();
-		menuSteps.insertSearchCriteria("Ford");
-		menuSteps.selectDropDownMenu("Auto");
+		menuSteps.insertSearchCriteria(searchCriteria);
+		menuSteps.selectDropDownMenu(auto);
 		menuSteps.clickOnHomeSearchButton();
-		searchResultSteps.checkIfSearchCriteriaAppearsInResultsPage("Ford");
+		searchResultSteps.checkIfSearchCriteriaAppearsInResultsPage(searchCriteria);
 	}
 
 }
