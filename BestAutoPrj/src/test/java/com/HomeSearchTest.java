@@ -15,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.pages.HomePage;
 import com.steps.HomeSteps;
+import com.steps.MenuSteps;
+import com.steps.SearchResultsSteps;
 
 @RunWith(ThucydidesRunner.class)
 public class HomeSearchTest {
@@ -28,15 +30,23 @@ public class HomeSearchTest {
     @Steps
 	public HomeSteps homeSteps;
 
-	String brand = "VW";
+    @Steps
+	public MenuSteps menuSteps;
+    
+
+	@Steps
+	public SearchResultsSteps searchResultSteps;
+    
+	String brand = "Vw";
 	String model = "Bora";
-	String price = "6000";
+	String price = "nelimitat";
 	String buildDate = "2001";
 	String kilometers = "200000";
 	String fuel = "Diesel";
 
     @Test
     public void homeSearch() {
+    	menuSteps.openHomePage();
     	homeSteps.selectBrand(brand);
     	homeSteps.selectModel(model);
     	homeSteps.selectPrice(price);
@@ -44,6 +54,7 @@ public class HomeSearchTest {
     	homeSteps.selectKilometers(kilometers);
     	homeSteps.selectFuel(fuel);
     	homeSteps.clickSearchButton();
+		searchResultSteps.checkIfSearchCriteriaAppearsInResultsPage();
 
     }
 }
