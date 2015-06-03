@@ -1,9 +1,9 @@
-package Constants.com;
+package com.Tools;
 
 public class SearchResultModel {
 
 	private String name;
-	private int price;
+	private String price;
 
 	public String getName() {
 		return name;
@@ -13,11 +13,11 @@ public class SearchResultModel {
 		this.name = name;
 	}
 
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 }

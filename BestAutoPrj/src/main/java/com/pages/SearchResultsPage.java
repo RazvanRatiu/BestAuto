@@ -11,7 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import Constants.com.SearchResultModel;
+import com.Tools.SearchResultModel;
 
 public class SearchResultsPage extends PageObject {
 
