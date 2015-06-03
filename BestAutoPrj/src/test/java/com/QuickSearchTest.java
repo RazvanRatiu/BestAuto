@@ -38,7 +38,7 @@ public class QuickSearchTest {
 		menuSteps.insertSearchCriteria("Ford");
 		menuSteps.selectDropDownMenu("Auto");
 		menuSteps.clickOnHomeSearchButton();
-		searchResultSteps.checkIfSearchCriteriaAppearsInResultsPage();
+		searchResultSteps.checkIfSearchCriteriaAppearsInResultsPage("Ford");
 	}
 
 }

@@ -15,8 +15,8 @@ public class SearchResultsSteps extends ScenarioSteps {
 	SearchResultsPage searchResultsPage;
 	
 	@Step
-	public void checkIfSearchCriteriaAppearsInResultsPage(){
-		searchResultsPage.checkIfSearchCriteriaAppearsOnResultsPage();
+	public void checkIfSearchCriteriaAppearsInResultsPage(String text){
+		searchResultsPage.checkIfSearchCriteriaAppearsOnResultsPage(text);
 	}
 	
 }
