@@ -17,7 +17,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import Constants.com.SearchResultModel;
+import com.Tools.*;
+
 
 @DefaultUrl("http://bestauto.ro")
 public class SearchResultNegativePrice extends PageObject{
@@ -44,8 +45,8 @@ public class SearchResultNegativePrice extends PageObject{
 			String price = element.findElement(By.cssSelector("h3 span:first-child")).getText().replace(" EUR", "").trim();
 			int pretz = Integer.parseInt(price);
 			
-			itemNow.setPrice(Integer.valueOf(price));
-			//add name to itemNow
+//			itemNow.setPrice(Integer.valueOf(price));
+//			//add name to itemNow
 			
 			
 			priceList.add(itemNow);
