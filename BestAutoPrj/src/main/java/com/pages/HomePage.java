@@ -78,4 +78,4 @@ public class HomePage extends PageObject {
 		searchButton.click();
 	}
 
-	}
+}

@@ -31,6 +31,21 @@ public class MenuPage extends PageObject {
 	@FindBy(id ="homeSearch")
 	private WebElementFacade quickSearchInput;
 	
+	@FindBy(css="div ul[id='topmenu_jsdm'] li :first-child")
+	private WebElementFacade mobile;
+	
+	@FindBy(css="ul li a[href='auto']")
+	private WebElementFacade masini;
+	
+	
+	public void clickOnMasiniButton(){
+		masini.click();
+	}
+	
+	public void clickOnMobileButton(){
+		mobile.click();
+	}
+	
 	public void clickCautareButton() {
         cautareButton.click();
     }  

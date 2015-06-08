@@ -15,6 +15,18 @@ public class MenuSteps extends ScenarioSteps {
 	
 	MenuPage menuPage;
 	
+	@Step 
+	public void clickOnMasiniButton(){
+		menuPage.clickOnMasiniButton();
+	}
+	
+	
+	@Step 
+	public void clickOnMobileButton(){
+		menuPage.clickOnMobileButton();
+	}
+	
+	
 	@Step
     public void openHomePage() {
         menuPage.open();
